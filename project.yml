@@ -1,0 +1,22 @@
+name: DROIDCAST
+
+options:
+  bundleIdPrefix: com.droidcast
+
+targets:
+  DROIDCAST:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: ios/Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.droidcast.receiver
+        PRODUCT_NAME: DROIDCAST
+        SWIFT_VERSION: 5.0
+        TARGETED_DEVICE_FAMILY: "1,2"
+        INFOPLIST_KEY_CFBundleDisplayName: DROIDCAST
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: DROIDCAST uses your local network to discover your Android device.
+        INFOPLIST_KEY_NSBonjourServices:
+          - _droidcast._tcp
